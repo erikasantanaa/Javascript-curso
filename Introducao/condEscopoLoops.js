@@ -8,7 +8,7 @@
  de código quando o IF for falso.*/
 let nome = 'Maria';
 
-if (nome == 'Maria'){
+if (nome == 'Maria') {
     console.log('Acesso permitido');
 } else {
     console.log('Acesso Negado!');
@@ -18,11 +18,11 @@ if (nome == 'Maria'){
  comando ELSE IF (senão se). */
 let cidade = 'Belem';
 
-if(cidade == 'Belem'){
+if (cidade == 'Belem') {
     console.log('Cidade de Belém');
-} else if(cidade == 'Rio de janeiro'){
+} else if (cidade == 'Rio de janeiro') {
     console.log('Cidade Rio de Janeiro');
-} else if(cidade == 'Sao Paulo'){
+} else if (cidade == 'Sao Paulo') {
     console.log('Cidade de São Paulo');
 } else {
     console.log('Outra cidade')
@@ -52,7 +52,7 @@ tipo do dado precisam ser iguais.*/
 
 let codigo = '0';
 
-switch (codigo){
+switch (codigo) {
     case 0:
         console.log('0');
         break;
@@ -71,12 +71,86 @@ Complete a função testarTamanho de forma que quando for passada um numero, ela
 - retorne o texto 'na faixa' se for maior ou igual que 3 e menor  ou igual a 15.
 obs: texto com letras minusculas.
 */
-function testarTamanho(valor){
-    if (valor > 15){
+function testarTamanho(valor) {
+    if (valor > 15) {
         return 'maior';
-    } else if (valor < 3){
+    } else if (valor < 3) {
         return 'menor';
     } else {
         return 'na faixa';
     }
- }
+}
+
+//EXERCICIO:
+/*
+Crie uma estrutura de controle (If ou Switch) dentro da função mudarPropriedade
+que efetue a lógica pedida nos comentários.
+Dica: Se precisar, reveja as aulas de switch e if/else; não esqueça do break; 
+os case precisam ter strings com letras minusculas.
+*/
+
+let carro = {
+    rodas: 4,
+    portas: 2,
+    cor: "cinza",
+    ano: 2012,
+    estado: "novo"
+};
+
+
+function mudarPropriedade(nomePropriedade, novoValor) {
+    switch (nomePropriedade) {
+        // O case rodas é um exemplo para as próximas partes
+        case "rodas":
+            if (novoValor > 1) {
+                carro.rodas = novoValor;
+            }
+            else {
+                return "Minimo de rodas precisa ser 2";
+            }
+            break;
+        case "portas":
+            // Para alterar as portas, é necessário que o
+            // novo valor seja maior que 0
+            // senão deve retornar a string "Minimo de portas precisa ser 1"
+            if (novoValor > 0) {
+                carro.portas = novoValor;
+            } else {
+                return "Minino de portas precisa ser 1"
+            }
+            break;
+
+        case "cor":
+            // para alterar a cor, novo valor pode ser igual a cinza ou preto ou vermelho
+            // se for diferente, retornar "Cor invalida"
+            if (novoValor == "cinza" || novoValor == "preto" || novoValor == "vermelho") {
+                carro.cor = novoValor;
+            } else {
+                return "cor invalida";
+            }
+            break;
+
+        case "ano":
+            // criar um case para o "ano"
+            // alterar o ano do carro para o ano informado
+            // se o ano for igual a 2019, alterar o estado para "novo" 
+            // senao alterar o estado para "usado"
+            carro.ano = novoValor;
+            if (novoValor == 2019) {
+                carro.estado = "novo";
+            } else {
+                carro.estado = "usado";
+
+            }
+            break;
+
+        default:
+            return "invalida"
+            // retornar a fraase "Propriedade invalida";
+            return "propriedade invalida";
+    }
+
+    // retornar a frase Alteracao concluida somente se foi possivel
+    // alterar um dado do objeto.
+    return "Alteracao concluida"
+}
