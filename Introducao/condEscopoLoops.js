@@ -217,3 +217,94 @@ let dias = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"];
 for(let dia of dias){
     console.log(dia);
 }
+
+/*
+WHILE: Este loop funciona de forma
+bem simples. Enquanto (while) a
+condição for true, executa o
+código.
+*/
+let num = 1;
+
+while(num < 10){
+    console.log(`Valor: ${num}`);
+    num = num + 2;
+}
+
+/*
+DO WHILE: Similar ao while, o do
+while executa um trecho de código e
+depois testa se o executará
+novamente.
+Ambos “while” e “do
+while” tem uma lógica similar. A
+situação que definirá qual o melhor
+loop para seu código.
+*/
+let numero = 1;
+
+do{
+    console.log(numero);
+    numero++;
+}
+
+while(numero < 10);
+
+/*
+Break: O break é um comando que
+podemos utilizar quando queremos
+parar/encerrar o loop na hora.
+*/
+
+/*
+Continue: Com este comando, é
+possível iniciar a próxima
+repetição do loop.
+*/
+
+//EXERCICIO: LOOPS
+
+let alunos = [
+    {
+        nome: 'Erika',
+        nota: 8
+    },
+    {
+        nome: 'Alice',
+        nota: 4
+    },
+    {
+        nome:'Wendell',
+        nome: 8
+    },
+    {
+        nome: 'Sara',
+        nota: 9
+    },
+    {
+        nome: 'Tonia',
+        nota: 7
+    },
+    {
+        nome: 'Chimbica',
+        nota: 6
+    },
+]
+
+//escreva um loop que percorre o vetor acima e informa se o aluno passou
+//condição para passar: nota maior que 7.
+
+console.log('FOR');
+for(let i = 0; i < alunos.length; i++){
+    if(alunos[i].nota > 7){
+        console.log(`Aluno(a) ${alunos[i].nome} : passou`);
+    }
+}
+//FOR OF é para percorrer um vertor (array)
+console.log('-----------------------------');
+console.log('FOR OF');
+for(let aluno of alunos){
+    if(aluno.nota > 7){
+        console.log(`Aluno(a) ${aluno.nome}: Passou`);
+    }
+}
