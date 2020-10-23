@@ -154,3 +154,66 @@ function mudarPropriedade(nomePropriedade, novoValor) {
     // alterar um dado do objeto.
     return "Alteracao concluida"
 }
+
+/* LOOPS
+FOR: O “for” é um comando que
+executa X vezes uma ação seguindo a
+forma como foi definido para ele
+fazê-la.
+*/
+/*
+INSTRUÇÃO: a instrução de execução
+do for é dividida em 3 partes
+separadas por ponto e vírgula.
+1ª) Instrução ocorrerá quando o for
+iniciar. Normalmente é a criação de
+uma variável de controle.
+2ª) A condição para encerrar o for.
+Neste caso, ele executará enquanto
+i for menor que 10.
+Importante: caso essa condição
+nunca se torne “false”, teremos um
+loop infinito.
+Instrução que ocorrerá no final
+de cada repetição. Normalmente é um
+incremento de 1 da variável.*/
+//executa 0 a 9.
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+};
+
+/*
+Utilidade: Além de executar uma
+mesma instrução várias vezes. Ele é
+perfeito para ler vetores...
+*/
+// let lista = ["cachorro", "gato", "galinha"];
+
+// for(let i = 0; 1 < lista.length; i++){
+//     console.log(lista[1]);
+// }
+
+//ou modificar todos os itens de um vetor.
+// let valores = [1, 2, 3, 4, 5];
+
+// for (let i = 0; 1 < valores.length; i++) {
+//     valores[i] = valores[i] * 2;
+//     console.log(valores[i]);
+// }
+
+/*FOR OF:
+
+FOR OF: este loop é específico para
+iterar entre os elementos de uma
+lista.
+
+OBS: Caso você precise trabalhar com índices
+ou múltiplas posições da lista, talvez
+seja melhor usar o for normal.
+*/
+
+let dias = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"];
+
+for(let dia of dias){
+    console.log(dia);
+}
