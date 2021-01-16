@@ -1,4 +1,4 @@
-//strings
+// strings
 const email = 'erika@gmail.com';
 console.log(email);
 
@@ -6,7 +6,6 @@ console.log(email);
 const firstName = 'Erika';
 const lastName = 'Santana';
 const fullName = `${firstName} ${lastName}`;
-
 console.log(fullName);
 
 //Acessando caracteres
@@ -18,7 +17,19 @@ console.log(fullName.toUpperCase());
 //armazenando um metodo em uma variacel/ letra minuscula
 const result = fullName.toLowerCase();
 console.log(result, fullName);
-
 //encontrar o caracter dentro do index/ indexOf('@') se chama argumento
 const index = email.indexOf('@');
 console.log(index)
+
+//----------------------------------
+//Métodos comuns de strings 
+const conta = 'cursojavascript@erika.com.br'
+
+const lastIndexOfA = conta.lastIndexOf('a');
+console.log(lastIndexOfA);
+
+const emailSlice = conta.slice(3, 5);
+console.log(emailSlice)
+
+const emailReplace = conta.replace('curso', 'aula');
+console.log(emailReplace);
