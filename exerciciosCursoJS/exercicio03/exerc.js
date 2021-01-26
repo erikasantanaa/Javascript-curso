@@ -24,11 +24,13 @@ número diretamente;
 mas sem digitar os nomes das comidas diretamente;
 - Exiba a foodsInfo no console.
 */
-const foodsInfo = 'Até aqui, o array "brazilianFoods" possui NUMERO_DE_ITENS itens: NOME_DO_ITEM_1, NOME_DO_ITEM_2 e NOME_DO_ITEM_3.'
+const foodsInfo = `Até aqui, o array "brazilianFoods" possui ${brazilianFoods.length}: 
+${brazilianFoods[0]},${brazilianFoods[1]} e ${brazilianFoods[2]}.`
+console.log(foodsInfo)
 
+console.log('---------------------------------------------')
 /*
-06 - Comente o console.log acima e:
-
+06 . 
 - Armazene um array com os itens "Chico" e "Zeca" em uma const  
 "maleDogNames";
 - Agora, em uma const "femaleDogNames", armazene um array com os  
@@ -37,7 +39,11 @@ itens "Lilica" e "Matilda";
 "maleDogNames" e "femaleDogNames";
 - Exiba a "dogNames" no console.
 */
+const maleDogNames = ['Chico', 'Zeca']
+const femaleDogNames = ['Lilica', 'Matilda']
 
+let dogNames = maleDogNames + femaleDogNames
+console.log(dogNames)
 
 
 /*
