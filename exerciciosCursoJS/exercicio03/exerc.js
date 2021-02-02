@@ -8,7 +8,7 @@
 /*
 02 - Armazene um array vazio em uma let "brazilianFoods";
 */
-const brazilianFoods = []
+let brazilianFoods = []
 /*
 03 - Use o método adequado para adicionar os 3 seguintes itens ao array:
 - Coxinha
@@ -16,16 +16,20 @@ const brazilianFoods = []
 - Brigadeiro
 - Exiba a brazilianFoods no console.
 */
+
 brazilianFoods.push('coxinha', null, 'brigadeiro')
 // console.log(brazilianFoods)
+
 /*
 04 .
 - Através de uma reatribuição de valor, faça com que o 2º item do  
 array "brazilianFoods" (null) seja substituído por "Pão de Queijo";
 - Exiba apenas o 2º item desse array no console.
 */
+
 brazilianFoods[1] = 'pão de queijo'
-// console.log(brazilianFoods)
+// console.log(brazilianFoods[1])
+
 /*
 05 .
 - Armazene em uma const "foodsInfo" a seguinte string: "Até aqui, o  
@@ -41,8 +45,13 @@ const foodsInfo = `Até aqui, o
 array "brazilianFoods" possui ${brazilianFoods.length} itens: ${brazilianFoods.slice(0, 1)},  
 ${brazilianFoods.slice(1, 2)} e ${brazilianFoods.slice(2)}`
 
+// ou `Até aqui, o  
+// array "brazilianFoods" possui ${brazilianFoods.length} itens: ${brazilianFoods[0]},  
+// ${brazilianFoods[1]} e ${brazilianFoods[2]}`
+
 // console.log(foodsInfo)
 /*
+
 06 .
 - Armazene um array com os itens "Chico" e "Zeca" em uma const  
 "maleDogNames";
@@ -54,8 +63,8 @@ itens "Lilica" e "Matilda";
 */
 const maleDogNames = ['Chico', 'Zeca']
 const femaleDogNames = ['Lilica', 'Matilda']
-
 let dogNames = maleDogNames.concat(femaleDogNames)
+
 // console.log(dogNames)
 
 
@@ -82,7 +91,7 @@ agora é "Lilica".
 */
 
 // dogNames.pop()
-// console.log(dogNames)
+// console.log(dogNames[dogNames.length - 1])
 
 
 /*
@@ -125,15 +134,13 @@ constante que você criou.
 'A SOBREMESA é um doce à base de coco, tradicional na América Latina e em Angola.'
 */
 
-const dessert = `${dogNames[0].slice(3, 5)}${dogNames[1].slice(2, 5)}${dogNames[4].slice(2, 4)}`
-dessert.replace('n', 'd' )
+const dessert = `${dogNames[0].slice(3, 5)}${dogNames[1].slice(2, 5)}${dogNames[4].slice(2, 4)}`.replace('n', 'd' )
 
 // console.log(dogNames)
-console.log(`a ${dessert} é um doce à base de coco, tradicional na América Latina e em Angola.`)
+// console.log(`a ${dessert} é um doce à base de coco, tradicional na América Latina e em Angola.`)
 
 /*
 12 - Comente o console.log acima e:
-
 - Declare um array com os números 3, 5, e 7 e o armazene em uma let  
 "oddNumbers";
 - Exiba no console o resultado do 2º item do array elevado ao cubo. O  
@@ -145,9 +152,9 @@ já tem, mais 4;
 */
 
 let oddNumbers = [3, 5, 7]
+oddNumbers[1] += 4
 
-
-console.log()
+console.log(oddNumbers[1] ** 3)
 
 
 
