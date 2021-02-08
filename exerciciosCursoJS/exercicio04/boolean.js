@@ -12,7 +12,7 @@
 */
 
 const my3FavoriteTVShows = ['A cabana', 'Quarto de Guerra', 'Star Wars']
-const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.slice(0, 1)}, ${my3FavoriteTVShows.slice(1, 2)} e ${my3FavoriteTVShows.slice(2)}`
+const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.join(', ')}`.replace(', S', ' e S')
 
 // console.log(sentence)
 
@@ -20,26 +20,24 @@ const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.slice(0,
   02 - Comente o console.log() acima e:
   - Exiba no console um boolean indicando se o array de séries que você criou  
     possui 3 itens.
-*/
-
-// const includes = my3FavoriteTVShows.includes([3])
-// console.log(includes)
-
-/*
   03 - Comente o console.log() acima e:
   - Após a constante abaixo, armazene em uma constante "isRandomTVShowIncluded"  
     um boolean que indica se a série que a "randomTVShow" armazena é uma das  
     suas 3 séries favoritas;
   - Utilize o método adequado para fazer essa verificação;
-  - Exiba no console o boolean que a "isRandomTVShowIncluded" recebeu.
+  - Exiba no console o boolean que a "isRandomTVShowIncluded
+  " recebeu.
 */
 
+// console.log(my3FavoriteTVShows.length === 3)
+
 const randomTVShow = 'Watchmen'
-const isRandomTVShowIncluded = 
+const isRandomTVShowIncluded = my3FavoriteTVShows.includes(randomTVShow)
+
+// console.log(isRandomTVShowIncluded)
 
 /*
   04 - Comente o console.log() acima e:
-
   - Armazene a frase abaixo em uma constante "typeSentence", substituindo  
     "TIPO_DE_DADO" pela informação correta;
   - Utilize o operador adequado para gerar essa informação;
@@ -47,12 +45,11 @@ const isRandomTVShowIncluded =
 
   "O tipo de dado que a const "isRandomTVShowIncluded" armazena é: TIPO_DE_DADO."
 */
-
-
+const typeSentence = `O tipo de dado que a const "isRandomTVShowIncluded" armazena é: ${typeof isRandomTVShowIncluded}`
+// console.log(typeSentence)
 
 /*
   05 - Comente o console.log() acima e:
-
   - Exiba a frase abaixo no console, substituindo "NÚMERO_DE_CARACTERES" por 39  
     e "BOOLEAN" pela informação correta (true ou false);
   - Converta explicitamente este boolean em uma string ao inserí-lo na frase;
@@ -63,8 +60,10 @@ const isRandomTVShowIncluded =
   "A string que a "typeSentence" armazena tem mais de NÚMERO_DE_CARACTERES  
   caracteres? BOOLEAN."
 */
+const numberToCheck = 39
 
-
+console.log(`A string que a "typeSentence" armazena tem mais de ${numberToCheck}  
+caracteres? ${String(typeSentence.length > numberToCheck).replace('t', 'T')}.`)
 
 /*
   06 - Comente o console.log() acima e:
@@ -77,7 +76,8 @@ const isRandomTVShowIncluded =
 */
 
 const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
-
+// console.log(`Todos os ${falsyValues.includes()} itens do array "falsyValues" são falsy. Inclusive o  
+// BOOLEAN`)
 /*
   07 - Comente o console.log() acima e:
 
