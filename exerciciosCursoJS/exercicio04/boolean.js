@@ -62,8 +62,8 @@ const typeSentence = `O tipo de dado que a const "isRandomTVShowIncluded" armaze
 */
 const numberToCheck = 39
 
-console.log(`A string que a "typeSentence" armazena tem mais de ${numberToCheck}  
-caracteres? ${String(typeSentence.length > numberToCheck).replace('t', 'T')}.`)
+// console.log(`A string que a "typeSentence" armazena tem mais de ${numberToCheck}  
+// caracteres? ${String(typeSentence.length > numberToCheck).replace('t', 'T')}.`)
 
 /*
   06 - Comente o console.log() acima e:
@@ -76,8 +76,11 @@ caracteres? ${String(typeSentence.length > numberToCheck).replace('t', 'T')}.`)
 */
 
 const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
-// console.log(`Todos os ${falsyValues.includes()} itens do array "falsyValues" são falsy. Inclusive o  
-// BOOLEAN`)
+
+// console.log(`Todos os ${falsyValues.length} itens do array "falsyValues" são falsy. Inclusive o  
+// ${falsyValues[2]}`)
+
+
 /*
   07 - Comente o console.log() acima e:
 
@@ -86,6 +89,12 @@ const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
     em boolean.
   - Você sabe por que essa conversão resultou em true?
 */
+
+//null = e 0.
+const crazyOperation = null + 1
+const crazyConversion = Boolean(crazyOperation)
+
+// console.log(crazyConversion)
 
 
 
@@ -102,7 +111,13 @@ const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
   é: BOOLEAN."
 */
 
+const ages = [31, 82, 61, 11]
+const agesSum = ages[0] + ages[2]
+const number = 92
 
+// console.log(agesSum)
+// console.log(`A soma entre o 1º e o 3º item de "ages" é menor ou igual a 92. Essa afirmação  
+// é: ${agesSum <= number}.`)
 
 /*
   09 - Comente o console.log() acima e:
@@ -113,14 +128,16 @@ const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
   - Exiba a "isNotAString" no console.
 */
 
-
+const isNotAString = typeof randomTVShow !== 'string'
+// console.log(isNotAString)
 
 /*
   10 - Comente o console.log() acima e:
-
   - Abaixo da constante "evenNumbers", exiba no console um boolean que indica se  
     o número 8 existe no array;
   - Não utilize o método includes desta vez.
 */
 
 const evenNumbers = [0, 2, 4, 6, 8, 10]
+
+console.log(evenNumbers.indexOf(8) !== -1)
