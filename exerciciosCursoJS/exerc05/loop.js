@@ -9,7 +9,6 @@
 
 /*
   01
-
   - Utilizando um while loop, exiba no console todos os números entre 0 e 5,  
     inclusive esses dois.
   - O resultado deve ser:
@@ -21,19 +20,25 @@
     5
 */
 
+// let i = 0
 
+// while (i < 6){
+//   console.log(`${i}`)
+//   i++
+// }
 
 /*
   02 - Comente a declaração da let e o loop acima e:
-
   - Utilizando um for loop, faça o mesmo que foi pedido no exercício 01.
 */
 
+// for (let i = 0; i < 6; i++){
+//   console.log(`${i}`)
+// }
 
 
 /*
   03 - Comente o loop acima e:
-
   - Escreva um loop (for ou while) que exiba a frase abaixo no console;
   - Substitua o "X" pela informação correta;
   - "X" deve começar em 1 na 1ª exibição da frase e em 10 na última;
