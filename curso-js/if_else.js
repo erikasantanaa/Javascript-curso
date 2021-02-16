@@ -1,3 +1,4 @@
+//controle de fluxo
 const password = '12345678'
 
 if (password.length >= 12){

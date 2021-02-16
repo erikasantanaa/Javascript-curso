@@ -25,9 +25,16 @@
 
 const fruits = ['morango', 'banana', 'mamão']
 
+  if(fruits.length === 'abacaxi'){
+    console.log('A string "abacaxi" existe no array fruits.')
+  } else if(fruits.length === 'pera'){
+    console.log('A string "pera" existe no array fruits.')
+  }else {
+    console.log('Nem pera nem abacaxi existem no array "fruits".')
+  }
+
 /*
   02
-
   - Armazene em uma constante apenas a hora atual na qual você está fazendo este  
     exercício. Ex.: 18;
   - À partir das 6, exiba "Bom dia!" no console;
