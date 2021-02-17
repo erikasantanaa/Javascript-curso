@@ -25,13 +25,15 @@
 
 const fruits = ['morango', 'banana', 'mamão']
 
-  if(fruits.length === 'abacaxi'){
-    console.log('A string "abacaxi" existe no array fruits.')
-  } else if(fruits.length === 'pera'){
-    console.log('A string "pera" existe no array fruits.')
-  }else {
-    console.log('Nem pera nem abacaxi existem no array "fruits".')
-  }
+if (fruits.includes('abacaxi')){
+  console.log('A string "abacaxi" existe no array fruits.')
+}else if (fruits.includes('pera')){
+  console.log('A string "pera" existe no array fruits.')
+}else {
+  console.log('Nem pera nem abacaxi existem no array "fruits"')
+}
+
+  console.log('----------------------------------')
 
 /*
   02
@@ -44,7 +46,18 @@ const fruits = ['morango', 'banana', 'mamão']
   Obs.: tanto a expressão do lado esquerdo quanto a do lado direito do operador  
   lógico precisam ter a constante especificada. Exemplo: hour > x && hour < y.
 */
+const hora = 19;
+const isMorning = hora >= 6 && hora <= 11;
+const isAfternoon = hora >= 12 && hora <= 17;
 
+if(isMorning){
+  console.log('Bom dia!')
+} else if(isAfternoon){
+  console.log('Boa tarde!')
+} else {
+  console.log('Boa noite!')
+}
+console.log('-------------------------------')
 /*
   03
 
@@ -57,8 +70,22 @@ const fruits = ['morango', 'banana', 'mamão']
   - Exiba a mensagem no console;
   - Agora, teste diferentes idades para se certificar que a condição do `if`  
     também está funcionando.
-*/
 
+    OBS: criando variaveis , fica mais facil de ler o if*/
+const age = 2;
+let priceMessage = null;
+const isChild = age <= 7;
+const isOlder = age >= 65;
+
+if(isChild || isOlder){
+  priceMessage = 'Para você, a entrada é grátis!'
+}else {
+  priceMessage = 'A entrada é R$ 30,00.'
+}
+
+console.log(priceMessage)
+
+console.log('--------------------------------')
 /*
   04
 
@@ -69,7 +96,14 @@ const fruits = ['morango', 'banana', 'mamão']
 */
 
 const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
+let numBetween11And90 = []
 
+for (let i = 0; i < numbers.length; i++){
+  if (numbers[i] >= 11 && numbers[i] <= 90){
+    numBetween11And90.push(numbers[i])
+  }
+}
+console.log(numBetween11And90)
 /*
   05
 
@@ -85,21 +119,10 @@ const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
 
 const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
 
-/*
-  06
+  for (let i = 0; i < crazyArray.length; i++){
+    const str = crazyArray.length
+    const bool = crazyArray.Booleans
+    console.log(`O crazyArray tem  booleans, ${bool} números e ${str} strings.`)
+  }
 
-  - Abaixo do array "randomNumbers", utilize um for loop para gerar 2 novos  
-    arrays: um array com apenas os números ímpares do "randomNumbers" e um outro  
-    array com apenas os números pares;
-  - Após isso, utilizando os dois arrays que você criou, exiba a frase abaixo  
-    no console, substituindo "XX, XX e XX" pelos números corretos. Os números  
-    da frase não devem ser inseridos com a notação "item[index]" e os "e" antes  
-    do último número ímpar e do último número par devem constar na frase;
-  
-  - Dica: para saber se um número é par, o restante da divisão dele por 2 deve  
-    ser 0.
 
-  "Numeros ímpares: XX, XX e XX. Números pares: XX, XX e XX."
-*/
-
-const randomNumbers = [73, 4, 67, 10, 31, 58]
