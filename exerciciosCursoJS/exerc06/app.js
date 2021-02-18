@@ -99,7 +99,10 @@ const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
 let numBetween11And90 = []
 
 for (let i = 0; i < numbers.length; i++){
-  if (numbers[i] >= 11 && numbers[i] <= 90){
+  const number = numbers[i]
+  const isnumBetween11And90 = number >= 11 && number <= 90
+
+  if (isnumBetween11And90){
     numBetween11And90.push(numbers[i])
   }
 }
@@ -117,12 +120,61 @@ console.log(numBetween11And90)
   "O crazyArray tem X booleans, X números e X strings."
 */
 
-const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
+  const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
+  let numberAmount = 0
+  let booleanAmount = 0
+  let stringAmount = 0
 
   for (let i = 0; i < crazyArray.length; i++){
-    const str = crazyArray.length
-    const bool = crazyArray.Booleans
-    console.log(`O crazyArray tem  booleans, ${bool} números e ${str} strings.`)
+    const typtOfItem = typeof crazyArray[i]
+    const isItemANumber = typtOfItem === 'number'
+    const isItemABoolean = typtOfItem === 'boolean'
+
+    if( isItemANumber){
+      numberAmount++
+    } else if (isItemABoolean){
+    booleanAmount++
+    }else {
+      stringAmount++
+    }   
+  } 
+  
+  console.log(`O crazyArray tem ${booleanAmount} booleans, ${numberAmount} números e  strings.`)
+
+  console.log('--------------------------')
+
+
+  /*06
+
+  - Abaixo do array "randomNumbers", utilize um for loop para gerar 2 novos  
+    arrays: um array com apenas os números ímpares do "randomNumbers" e um outro  
+    array com apenas os números pares;
+  - Após isso, utilizando os dois arrays que você criou, exiba a frase abaixo  
+    no console, substituindo "XX, XX e XX" pelos números corretos. Os números  
+    da frase não devem ser inseridos com a notação "item[index]" e os "e" antes  
+    do último número ímpar e do último número par devem constar na frase;
+  
+  - Dica: para saber se um número é par, o restante da divisão dele por 2 deve  
+    ser 0.
+
+  "Numeros ímpares: XX, XX e XX. Números pares: XX, XX e XX."
+*/
+
+const randomNumbers = [73, 4, 67, 10, 31, 58]
+let oddNUmbers = []
+let evenNumbers = []
+
+for (let i = 0; i < randomNumbers.length; i++){
+  const isRandomNumbers = randomNumbers[i]
+  const isEvenNumber = isRandomNumbers % 2 === 0
+
+  if ( isEvenNumber ) {
+    evenNumbers.push(isRandomNumbers)
+  } else {
+    oddNUmbers.push(isRandomNumbers)
   }
+}
+const evenNumbersString = evenNumbers.join(', ').replace(', 10', ' e 5')
+const oddNUmbersStrings = oddNUmbers.join(', ').replace(', 3', ' e 3')
 
-
+console.log(`Numeros ímpares: ${oddNUmbersStrings} . Números pares:${evenNumbersString}.`)
