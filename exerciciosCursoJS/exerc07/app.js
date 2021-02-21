@@ -5,8 +5,10 @@
   - O resultado exibido no console deve ser: false true.
 */
 
-console.log(true, false)
+console.log(true, false);
 
+console.log(!true, !false);
+console.log('--------------------------')
 /*
   02
 
@@ -16,8 +18,14 @@ console.log(true, false)
   - Se existir, exiba no console a mensagem "Existe um leão no array animals.".
 */
 
-const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo']
+const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo', 'Leão']
 
+if(animals.includes('leão')){
+  console.log('Leão não existe no array animals.')
+} else{
+  console.log('Existe um leão no array animals.')
+}
+console.log('--------------------------')
 /*
   03
 
@@ -29,35 +37,16 @@ const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo']
   "A soma ultrapassou 400. Até aqui, o valor atual é RESULTADO_DA_SOMA."
 */
 
-const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43]
+const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43];
+let soma = 0;
 
-/*
-  04
+for (let i = 0; i < randomNumbers.length; i++){
+  soma += randomNumbers[i]
+}
+console.log(soma)
 
-  - Concatene as strings do array abaixo, formando uma frase;
-  - Se durante a concatenação a palavra "certeza" existir, ela não deve ser  
-    concatenada;
-  - Exiba a frase no console.
-*/
 
-const sentence = ['A', 'certeza', 'dúvida', 'é', 'o', 'princípio', 'da', 'sabedoria.']
 
-/*
-  05
-
-  - Itere sobre o array "randomValues" apenas até a 4ª string dele;
-  - Exiba a string abaixo no console, mantendo a formatação de lista e inserindo  
-    as informações corretas:
-
-  "
-    3 informações sobre o array randomValues:
-      - As primeiras 4 strings são XX, XX, XX e XX;
-      - Até que as primeiras 4 strings fossem iteradas, XX booleans foram iterados;
-      - O array foi iterado por XX vezes.
-  "
-*/
-
-const randomValues = [57, false, 'JS', [], true, 'HTML', 31, null, false, 'CSS', 97, true, 'Git', 11, 'sticker', false, 'GitHub', true, null]
 
 /*
   06
