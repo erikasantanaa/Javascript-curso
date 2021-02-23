@@ -1,30 +1,27 @@
-/*
-  01
-
+/*  01
   - Inverta o valor dos booleans do console.log() abaixo;
   - O resultado exibido no console deve ser: false true.
 */
-
 console.log(true, false);
-
 console.log(!true, !false);
-console.log('--------------------------')
-/*
-  02
 
+
+console.log('--------------------------')
+/*02
   - Abaixo do array "animals", verifique se o animal "leão" **não** existe no  
     array. Se não existir, exiba no console a mensagem "Leão não existe no array  
     animals.";
   - Se existir, exiba no console a mensagem "Existe um leão no array animals.".
 */
-
 const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo', 'Leão']
 
-if(animals.includes('leão')){
+if(!animals.includes('leão')){
   console.log('Leão não existe no array animals.')
 } else{
   console.log('Existe um leão no array animals.')
 }
+
+
 console.log('--------------------------')
 /*
   03
@@ -38,15 +35,20 @@ console.log('--------------------------')
 */
 
 const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43];
-let soma = 0;
+let sumResult = 0;
+const limit = 300;
 
 for (let i = 0; i < randomNumbers.length; i++){
-  soma += randomNumbers[i]
+  if (sumResult > limit){
+    console.log(`A soma ultrapassou ${limit}. Até aqui, o valor atual é ${sumResult}.`)
+    break
+  }
+  sumResult += randomNumbers[i];
 }
-console.log(soma)
+console.log(sumResult)
 
 
-
+console.log('------------------------')
 
 /*
   06
