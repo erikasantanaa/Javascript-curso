@@ -50,9 +50,83 @@ console.log(sumResult)
 
 console.log('------------------------')
 
+/*04 COMO CONCATENAR UM ARRAY DE STRINGS
+  - Concatene as strings do array abaixo, formando uma frase;
+  - Se durante a concatenação a palavra "certeza" existir, ela não deve ser  
+    concatenada;
+  - Exiba a frase no console.
+*/
+
+const sentence = ['A', 'certeza', 'dúvida', 'é', 'o', 'princípio', 'da', 'sabedoria.']
+let newSentence = '';
+
+for (let i = 0; i < sentence.length; i++) {
+  const word = sentence[i]
+  if(word === 'certeza'){
+    continue
+  }
+    newSentence += `${word} `
+}
+console.log(newSentence);
+
+
+console.log('------------------------')
+/*
+  05
+
+  - Itere sobre o array "randomValues" apenas até a 4ª string dele;
+  - Exiba a string abaixo no console, mantendo a formatação de lista e inserindo  
+    as informações corretas:
+
+  "
+    3 informações sobre o array randomValues:
+      - As primeiras 4 strings são XX, XX, XX e XX;      
+      - Até que as primeiras 4 strings fossem iteradas, XX booleans foram iterados;
+      - O array foi iterado por XX vezes.
+  "
+*/
+
+const randomValues = [57, false, 'JS', [], true, 'HTML', 31, null, false, 'CSS', 97, true, 'Git', 11, 'sticker', false, 'GitHub', true, null];
+let stringsAmount = 0;
+let booleansAmount = 0;
+let totalIterations = 0;
+let firstFourStrings = [];
+
+for (let i = 0; i < randomValues.length; i++) {
+  const item = randomValues[i]
+  const typeOfItem = typeof item;
+  const isItemAString = typeOfItem === 'string';
+  const isItemABoolean = typeOfItem === 'boolean';
+
+
+  if (stringsAmount === 4){
+    break
+  }
+
+  if (isItemAString) {
+    stringsAmount++
+    firstFourStrings.push(item)
+  }
+
+  if (isItemABoolean){
+    booleansAmount++
+  }
+
+  totalIterations++
+}
+const lastItem = firstFourStrings[firstFourStrings.length - 1];
+const fourStrings = firstFourStrings.join(', ').replace(`, ${lastItem}`, ` e ${lastItem}`);
+
+console.log(`3 informações sobre o array randomValues:
+    - As primeiras 4 strings são ${fourStrings};      
+    - Até que as primeiras 4 strings fossem iteradas, ${booleansAmount} booleans foram iterados;
+    - O array foi iterado por ${totalIterations} vezes.`)
+
+
+console.log('--------------------------------')
+
 /*
   06
-
   - Descomente a constante abaixo atribua a ela algum tipo de bebida. Exemplo:  
     água, refrigerante ou suco;
   - Utilize um switch statement com cases para essas 3 possibilidades de bebida;
@@ -70,8 +144,23 @@ console.log('------------------------')
     da bebida além da que você escolheu.
 */
 
-// const drinkType
+const drinkType = 'laranja';
+let drinkMessage = null;
 
+switch (drinkType){
+  case 'água':
+    drinkMessage = 'Subtância química cujas moléculas são formadas por dois átomos de hidrogênio e um de oxigênio.'
+    break;
+  case 'refrigerante':
+    drinkMessage = 'Bebida não alcoólica e não fermentada, fabricada industrialmente, à base de água mineral e açúcar.'
+    break
+  default:
+    drinkMessage = 'Bebida desconhecida'
+}
+
+console.log(drinkMessage)
+
+console.log('------------------------')
 /*
   07
 
@@ -80,8 +169,6 @@ console.log('------------------------')
     para testar o switch que você escreveu.
 */
 
-const a = 2
-
 // if (a === 0) {
 //   console.log(`O valor de "a" é ${a}`)
 // } else if (a === 1) {
@@ -89,3 +176,17 @@ const a = 2
 // } else {
 //   console.log('O valor de "a" é qualquer número, exceto 0 e 1')
 // }
+
+const number = 2;
+const numberMessege = 'O valor de "number" é';
+
+switch (number) {
+  case 0:
+    console.log(`${numberMessege} ${number}`)
+    break
+  case 1:
+    console.log(`${numberMessege} ${number}`)
+    break
+  default:
+    console.log(`${numberMessege} qualquer número, exceto 0 e 1`)
+}

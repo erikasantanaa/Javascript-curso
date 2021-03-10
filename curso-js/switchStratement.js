@@ -1,4 +1,4 @@
-//switch stratement
+//switch stratement (controle de fluxo)
 //nota que o aluno tirou na prova:
 
 const grade = 'B'
