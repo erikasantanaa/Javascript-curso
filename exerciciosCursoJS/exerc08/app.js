@@ -6,20 +6,26 @@
   - Previna que esses parâmetros recebam undefined;
   - Exiba o resultado no console, sem inserir um console.log() dentro da função.
 */
-let resul = function mult(x, y){
-  return  x * y;
+function mult(x, y){
+  return  x * y
 }
 
+const result = mult(2, 6)
+console.log(`O resultado da multiplicação é : ${result}`)
 
-
-
-/*
-  02
-
+/*02
   - Faça o mesmo que o exercício acima pede, mas desta vez, implemente uma  
     **function expression** que retorne o resultado da **divisão** entre esses  
     2 números.
 */
+
+const calcDivisao = function(x, y){
+  return x / y
+}
+
+const resulDivisao = calcDivisao(2, 8)
+console.log(`O resultado da Divisão é : ${resulDivisao}`)
+
 
 /*
   03
