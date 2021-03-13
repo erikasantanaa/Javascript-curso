@@ -6,6 +6,12 @@
   - Previna que esses parâmetros recebam undefined;
   - Exiba o resultado no console, sem inserir um console.log() dentro da função.
 */
+let resul = function mult(x, y){
+  return  x * y;
+}
+
+
+
 
 /*
   02
