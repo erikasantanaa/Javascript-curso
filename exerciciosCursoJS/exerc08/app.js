@@ -39,6 +39,11 @@ console.log(`O resultado da Divisão é : ${resulDivisao}`)
 
   "Esta é a Xª vez que essa string é exibida."
 */
+const numeros = function(n1, n2) {
+  console.log(`Esta é a ${n1 * n2} vez que essa string é exibida.`)
+}
+
+numeros(1, 7)
 
 /*
   04
@@ -52,6 +57,17 @@ console.log(`O resultado da Divisão é : ${resulDivisao}`)
 */
 
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
+
+
+
+const novoArray = function() {  
+  for (let i = 0; i < millennialWords.length; i++){
+    const newMillenniaWords = []
+    return newMillenniaWords[i]
+  }
+}
+
+novoArray()
 
 /*
   05
