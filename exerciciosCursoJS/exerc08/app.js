@@ -116,15 +116,23 @@ console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, se
     função.
 */
 
-getOddNumbers([83, 52, 31, 73, 98, 3,7, 61, 56, 12, 24, 35, 3, 34, 80, 42])
+const getOddNumbers = function (numbers = []) { 
+  const newArray = [];
 
-const numberImpares = function (array = []) {
-  let imparArray = []
+  for (let i = 0; i < numbers.length; i++){ 
+    const number = numbers[i]
+    const numberImpar = number % 2 !== 0;
+   
 
-  for (let i = 0; i < array.length; i++){
-    imparArray.push(array[i].length)
-  }
-}
+    if(numberImpar){
+      newArray.push(number)
+    }
+  };
+  return newArray
+};
+const numbersArray = getOddNumbers([83, 52, 31, 73, 98, 3,7, 61, 56, 12, 24, 35, 3, 34, 80, 42]);
+
+console.log(numbersArray)
 
 /*
   07
