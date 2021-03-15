@@ -6,12 +6,11 @@
   - Previna que esses parâmetros recebam undefined;
   - Exiba o resultado no console, sem inserir um console.log() dentro da função.
 */
-function mult(x, y){
-  return  x * y
+function multiply(firstNumber = 0, secondNumber = 0){
+  return  firstNumber * secondNumber
 }
 
-const result = mult(2, 6)
-console.log(`O resultado da multiplicação é : ${result}`)
+console.log(`O resultado da multiplicação é : ${multiply(2, 5)}`)
 
 /*02
   - Faça o mesmo que o exercício acima pede, mas desta vez, implemente uma  
@@ -19,12 +18,11 @@ console.log(`O resultado da multiplicação é : ${result}`)
     2 números.
 */
 
-const calcDivisao = function(x, y){
-  return x / y
+const calcDivisao = function(firstNumber, secondNumber){
+  return firstNumber / secondNumber
 }
 
-const resulDivisao = calcDivisao(2, 8)
-console.log(`O resultado da Divisão é : ${resulDivisao}`)
+console.log(`O resultado da Divisão é : ${calcDivisao(10, 5)}`)
 
 
 /*
@@ -33,17 +31,21 @@ console.log(`O resultado da Divisão é : ${resulDivisao}`)
   - Implemente uma função que apenas exibe no console o valor recebido por  
     parâmetro;
   - Previna que o parâmetro dessa função receba undefined;
-  - Faça a string abaixo ser exibida 7x no console;
+  - Faça a string abaixo ser exibida 7x no console; ( loop)
   - A cada exibição, substitua o "X" pela informação correta;
   - Não repita (manualmente) a invocação da função ou do console.log().
 
   "Esta é a Xª vez que essa string é exibida."
 */
-const numeros = function(n1, n2) {
-  console.log(`Esta é a ${n1 * n2} vez que essa string é exibida.`)
+const log = function(value = 'Você deve passar um valor como argumento') {
+  console.log(value)
 }
 
-numeros(1, 7)
+// for (let i = 0; i < 7; i++){
+//   let counter = i + 1;
+  
+//   log(`Esta é a ${counter}ª vez que essa string é exibida.`)
+// }
 
 /*
   04
@@ -58,16 +60,19 @@ numeros(1, 7)
 
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
 
+const transformToUpperCase = function (array = []){ 
+  let newArray = [];
 
+  for (let i = 0; i < array.length; i ++){
+    const wordInUpperCase = array[i].toUpperCase();
 
-const novoArray = function() {  
-  for (let i = 0; i < millennialWords.length; i++){
-    const newMillenniaWords = []
-    return newMillenniaWords[i]
+    newArray.push(wordInUpperCase)
   }
-}
+  return newArray;
+};
+const millennialWordsInUpperCase = transformToUpperCase(millennialWords);
 
-novoArray()
+log(millennialWordsInUpperCase)
 
 /*
   05
@@ -82,6 +87,25 @@ novoArray()
 
 const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
 
+let positiveNumbersCounter = 0
+let negativeNumbersCounter = 0
+
+const isPositive = function(number = 0) {
+  return number >= 1
+}
+
+for(let i = 0; i < randomNumbers.length; i++){
+  const isPositiveNumber = isPositive(randomNumbers[i])
+ 
+  if (isPositiveNumber) {
+    positiveNumbersCounter++
+  } else {
+    negativeNumbersCounter++
+  }
+}
+
+console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, sendo  positivos ${positiveNumbersCounter} e ${negativeNumbersCounter} negativos.`)
+
 /*
   06
 
@@ -92,7 +116,15 @@ const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
     função.
 */
 
-// getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
+getOddNumbers([83, 52, 31, 73, 98, 3,7, 61, 56, 12, 24, 35, 3, 34, 80, 42])
+
+const numberImpares = function (array = []) {
+  let imparArray = []
+
+  for (let i = 0; i < array.length; i++){
+    imparArray.push(array[i].length)
+  }
+}
 
 /*
   07
