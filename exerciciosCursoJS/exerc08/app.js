@@ -170,3 +170,12 @@ const functions = [
   function () { return 'Índias' },
   function () { return 'Ocidentais.' }
 ]
+
+let sentence = '';
+
+for (let i = 0; i < functions.length; i++){
+  const string = `${functions[i]()} `
+
+  sentence += string
+}
+console.log(sentence)
