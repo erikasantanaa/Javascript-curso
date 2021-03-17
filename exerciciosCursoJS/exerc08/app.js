@@ -1,56 +1,46 @@
-/*
-  01
-
-  - Utilizando function declaration, implemente uma função que recebe 2 números  
-    por parâmetro e retorna o resultado da multiplicação entre esses 2 números;
+/*  01  - Utilizando function declaration, implemente uma função que recebe 2 números  
+    por parâmetro 
+    e retorna o resultado da multiplicação entre esses 2 números;
   - Previna que esses parâmetros recebam undefined;
   - Exiba o resultado no console, sem inserir um console.log() dentro da função.
 */
-function multiply(firstNumber = 0, secondNumber = 0){
-  return  firstNumber * secondNumber
+function multiply(firstNumber = 0, secondNumber = 0) {
+  return firstNumber * secondNumber;
 }
 
-console.log(`O resultado da multiplicação é : ${multiply(2, 5)}`)
+console.log(`O resultado da multiply é: ${multiply(2, 10)}`);
 
-/*02
-  - Faça o mesmo que o exercício acima pede, mas desta vez, implemente uma  
+/*02  - Faça o mesmo que o exercício acima pede, mas desta vez, implemente uma  
     **function expression** que retorne o resultado da **divisão** entre esses  
     2 números.
 */
-
-const calcDivisao = function(firstNumber, secondNumber){
-  return firstNumber / secondNumber
+const calcDivisao = function (firstNumber = 0, secondNumber = 0) {
+  return firstNumber / secondNumber;
 }
 
-console.log(`O resultado da Divisão é : ${calcDivisao(10, 5)}`)
+console.log(`O resultado da calcDivisao é: ${calcDivisao(10, 5)}`);
 
 
-/*
-  03
-
-  - Implemente uma função que apenas exibe no console o valor recebido por  
+/* 03 - Implemente uma função que apenas exibe no console o valor recebido por  
     parâmetro;
   - Previna que o parâmetro dessa função receba undefined;
+
   - Faça a string abaixo ser exibida 7x no console; ( loop)
   - A cada exibição, substitua o "X" pela informação correta;
   - Não repita (manualmente) a invocação da função ou do console.log().
 
   "Esta é a Xª vez que essa string é exibida."
 */
-const log = function(value = 'Você deve passar um valor como argumento') {
-  console.log(value)
+const log = function (value = 'Você deve passar um valor como argumento') {
+  console.log(value);
 }
 
-// for (let i = 0; i < 7; i++){
-//   let counter = i + 1;
-  
-//   log(`Esta é a ${counter}ª vez que essa string é exibida.`)
-// }
+for (let i = 0; i < 7; i++){
+  let counter = i + 1;
+  log(`Esta é a ${counter}ª vez que essa string é exibida.`)
+} 
 
-/*
-  04
-
-  - Comente o código acima, de forma que a string não seja mais exibida no  
+/*04 - Comente o código acima, de forma que a string não seja mais exibida no  
     console;
   - Implemente uma função que retorna um novo array com as strings do array  
     "millennialWords" em letras maiúsculas;
@@ -58,14 +48,14 @@ const log = function(value = 'Você deve passar um valor como argumento') {
     função.
 */
 
-const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
+const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail'];
 
-const transformToUpperCase = function (array = []){ 
+const transformToUpperCase = function (array = []) {
   let newArray = [];
 
-  for (let i = 0; i < array.length; i ++){
-    const wordInUpperCase = array[i].toUpperCase();
-
+  for (let i = 0; i < array.length; i++){
+    let wordInUpperCase = array[i].toUpperCase();
+    
     newArray.push(wordInUpperCase)
   }
   return newArray;
@@ -75,18 +65,12 @@ const millennialWordsInUpperCase = transformToUpperCase(millennialWords);
 log(millennialWordsInUpperCase)
 
 /*
-  05
-
-  - Implemente uma função que retorna se um número é positivo;
+  05 - Implemente uma função que retorna se um número é positivo;
   - Use essa função para descobrir quantos números positivos o array 
     "randomNumbers" possui;
   - Exiba a frase abaixo no console, inserindo as informações corretas.
-
   "O array "randomNumbers" possui XX números, sendo XX positivos e XX negativos."
 */
-
-const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
-
 let positiveNumbersCounter = 0
 let negativeNumbersCounter = 0
 
