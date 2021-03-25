@@ -9,64 +9,65 @@ typeof: para ver o tipo */
 //     return String(value)
 //   }
 
-  const convertToString = value => String(value);
+const convertToString = value => String(value)
 
-  console.log(typeof convertToString(true));
-  
+console.log(convertToString(true))
+console.log(typeof convertToString(true))
+
+
   /* 02 - Crie uma função que retorne a quantidade de caracteres que uma string  
       recebida por parâmetro possui.  */
 
-  const retornaQuantidade = string => string.length;
+  const retornaString = string => string.length
 
-  console.log(retornaQuantidade('erika'));
-  
+  console.log(retornaString('Erika'))
+
+ 
   /* 03- Crie uma função que retorne todos os caracteres de uma string em letras  
       minúsculas;  
     - Utilize a função para exibir a string abaixo no console.
   
     "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO" */
 
-  const converterMinusculo = string => string.toLowerCase();
+  const stringminusculas = string => string.toLowerCase()
 
-  console.log(converterMinusculo('CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO'));
-
+  console.log(stringminusculas('CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO'))
   
   /* 04- Crie uma função que recebe 2 parâmetros: um caractere e uma string;
     - Ao ser invocada, a função deve retornar o index do caractere na string. */
 
-  const getIndex = (caracter, string) => string.indexOf(caracter);
+  const getIndex = (caracter, string) => string.indexOf(caracter)
 
-  console.log(getIndex('2', '123'));
-
+  console.log(getIndex('2', '1234'))
   
   /*05- Crie uma função que, ao ser invocada, retorna um boolean indicando se o item passado por argumento existe no array (também passado por argumento).*/
 
-  const retornaBoolean = (item, array) => array.includes(item);
-  
-  console.log(retornaBoolean(7, [1, 2, 3]))
+  const invocaBoolean = (item, array) => array.includes(item)
+
+  console.log(invocaBoolean('2', '1234'))
+
   
   /*06- Crie uma função que retorna a concatenação de 2 arrays, passados como  
       argumentos em sua invocação;*/
+  const concatenarArray = (array1, array2) => array1.concat(array2)
+  
+  console.log(concatenarArray(['erika', 'maria'], ['araujo', 'santana']))
 
-  const concatenaArrays = (array1, array2)  => array1.concat(array2)
-
-  console.log(concatenaArrays('123', '456'))
   
   
   /* 07- Crie uma função que retorna o array passado como argumento em sua invocação, mas com o último item removido.*/
   
-  const removeItem = array => {
-    array.pop()
-    return array
+  const remover = (removArray) => {
+    removArray.pop()
+
+    return removArray
   }
-  console.log(removeItem(['Erika', 'Maria', 'Santana']))
+  console.log(remover([1,2,3]))
+
 
   
   /*08 - Crie uma função que retorna se o valor passado como argumento em sua invocação é null. */
 
-  const isNull = value => value === null
-
-  console.log(isNull(null))
   
   /* 09 - Crie uma função que apenas invoca uma função de callback recebida por parâmetro;
     - Crie outra função que apenas exibe seu nome no console;
@@ -74,11 +75,7 @@ typeof: para ver o tipo */
       argumento a função que exibe seu nome no console e veja se o nome realmente  
       foi exibido. */
 
-  const invocaCallback = callback => callback()
-
-  const nome = () => console.log('Erika Santana')
-  
-  invocaCallback(nome)
+ 
   
   /* 10 - Crie uma função que invoca uma função de callback recebida por parâmetro.  
       A invocação da função recebida por parâmetro deve receber um valor como  
