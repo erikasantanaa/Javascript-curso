@@ -106,18 +106,41 @@ console.log(typeof convertToString(true))
 
     "O Xº item do array [X, X, X] é X."*/
   
-  // const numbers = [1, 2, 3]
+  const numbers = [1, 2, 3]
+
+  const infoNumero = (items, index, array )  => {
+    const posicao = index + 1
+    const item = array.join(', ')
+    
+    console.log(`O ${posicao}º item do array [${item}] é ${items}.`)
+  }
+
+  numbers.forEach(infoNumero)
+
+
   
   /* 12- Converta o for loop abaixo em um forEach;
     - Após a conversão, verifique se a cópia do array lettersCopy realmente foi  
       criada.*/
   
-  // const letters = ['v', 'e', 'p']
-  // let lettersCopy = []
+  const letters = ['v', 'e', 'p']
+  let lettersCopy = []
+
+
   
   // for (let i = 0; i < letters.length; i++) {
-  //   lettersCopy.push(letters[i])
-  // }
+    //   lettersCopy.push(letters[i])
+    // }
+    
+    letters.forEach(letter => {
+      lettersCopy.push(letter)
+    })
+  console.log(lettersCopy)
+
+  
+
+
+
   
   /*
     13
