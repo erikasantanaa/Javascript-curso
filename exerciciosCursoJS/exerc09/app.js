@@ -57,16 +57,17 @@ console.log(typeof convertToString(true))
   
   /* 07- Crie uma função que retorna o array passado como argumento em sua invocação, mas com o último item removido.*/
   
-  const remover = (removArray) => {
-    removArray.pop()
-
-    return removArray
+  const remover = (array) => {
+    array.pop()
+    return array
   }
   console.log(remover([1,2,3]))
-
-
   
   /*08 - Crie uma função que retorna se o valor passado como argumento em sua invocação é null. */
+  const eNull = value => value === null
+  
+  console.log(eNull(null))
+
 
   
   /* 09 - Crie uma função que apenas invoca uma função de callback recebida por parâmetro;
@@ -74,7 +75,14 @@ console.log(typeof convertToString(true))
     - Invoque a função que recebe um callback por parâmetro, passando como  
       argumento a função que exibe seu nome no console e veja se o nome realmente  
       foi exibido. */
+  const invocarCall = callback => {
+    callback()
+  }
 
+  const exibirNome = () => {
+    console.log('Erika Santana')
+  }
+  invocarCall(exibirNome)
  
   
   /* 10 - Crie uma função que invoca uma função de callback recebida por parâmetro.  
@@ -84,6 +92,13 @@ console.log(typeof convertToString(true))
     - Faça com que a invocação da função descrita no 1º item deste exercício (10)  
       resulte no triplo de 33. */
 
+  const callCalback = (value, call) => {
+    return call(value)
+  }
+
+  const triple = number => number * 3
+
+  console.log(callCalback(33, triple))
     
   
   /* 11 - Utilizando um forEach, baseado no array "numbers", a cada iteração, exiba a  
