@@ -125,27 +125,17 @@ console.log(typeof convertToString(true))
   
   const letters = ['v', 'e', 'p']
   let lettersCopy = []
-
-
-  
+ 
   // for (let i = 0; i < letters.length; i++) {
-    //   lettersCopy.push(letters[i])
-    // }
+  //     lettersCopy.push(letters[i])
+  //   }
     
-    letters.forEach(letter => {
-      lettersCopy.push(letter)
+    letters.forEach((array) => {
+      lettersCopy.push(array)
     })
   console.log(lettersCopy)
 
-  
-
-
-
-  
-  /*
-    13
-  
-    - Inclua o markup abaixo em seu index.html;
+  /*13- Inclua o markup abaixo em seu index.html;
     - Gere um template HTML com parágrafos. Cada parágrafo deve conter um item do  
       array "review";
     - Ao gerar o template, verifique no browser se os parágrafos foram incluídos  
@@ -160,23 +150,27 @@ console.log(typeof convertToString(true))
     </article>
   */
   
-  // const section = document.querySelector('[data-js="section"]')
+  const section = document.querySelector('[data-js="section"]')
   
-  // const review = [
-  //   'Eu sempre adorei o filme e quando descobri que tinha o livro também fiquei doido. Demorei um pouco mas acabei comprando e finalmente li \o/.',
-  //   'O primeiro filme foi baseado nesse livro, porém o livro (como sempre) é muito mais completo, com mais personagens, mais acontecimentos e até mesmo mais dinossauros. Na verdade nesse livro tem coisas do segundo e terceiro filme também, eles mudaram bastante nos filmes, acho que pra ficar mais comercial, e se o filme é bom, o livro é 100 vezes melhor.',
-  //   'Michael é um ótimo autor, esse sim pesquisa muito antes de escrever um livro, além da história que já prende sua atenção, ele fala bastante de genética (pra explicar como os dinossauros foram criados) e acaba falando um pouco de programação (informática), por causa dos programas avançados e modernos que o parque tinha. E isso foi uma das coisas que eu achei muito legal, ele explica as coisas com gráficos, tabelas, códigos ... enfim, o cara é foda hahaha.',
-  //   'Recomendo esse livro pra quem curte uma boa história de ficção. Apesar de muita gente pensar que o livro não tem graça, porque o legal mesmo é ver o dinossauro no filme, com todos os efeitos especiais, eu digo pra deixar esse pensamento de lado, pois a história é tão bem contada e os detalhes são tão bem relatados, que você passa a fazer parte da história, e vive todas as emoções hahaha.'
-  // ]
+  const review = [
+    'Eu sempre adorei o filme e quando descobri que tinha o livro também fiquei doido. Demorei um pouco mas acabei comprando e finalmente li \o/.',
+    'O primeiro filme foi baseado nesse livro, porém o livro (como sempre) é muito mais completo, com mais personagens, mais acontecimentos e até mesmo mais dinossauros. Na verdade nesse livro tem coisas do segundo e terceiro filme também, eles mudaram bastante nos filmes, acho que pra ficar mais comercial, e se o filme é bom, o livro é 100 vezes melhor.',
+    'Michael é um ótimo autor, esse sim pesquisa muito antes de escrever um livro, além da história que já prende sua atenção, ele fala bastante de genética (pra explicar como os dinossauros foram criados) e acaba falando um pouco de programação (informática), por causa dos programas avançados e modernos que o parque tinha. E isso foi uma das coisas que eu achei muito legal, ele explica as coisas com gráficos, tabelas, códigos ... enfim, o cara é foda hahaha.',
+    'Recomendo esse livro pra quem curte uma boa história de ficção. Apesar de muita gente pensar que o livro não tem graça, porque o legal mesmo é ver o dinossauro no filme, com todos os efeitos especiais, eu digo pra deixar esse pensamento de lado, pois a história é tão bem contada e os detalhes são tão bem relatados, que você passa a fazer parte da história, e vive todas as emoções hahaha.'
+  ]
   
-  // let paragraphs = ''
+  let paragraphs = ''
+
+  const criarParagrafo = array => {
+    paragraphs += `<p> ${array}</p>`}
+
+  review.forEach(criarParagrafo)
   
-  // section.innerHTML = paragraphs
+  section.innerHTML = paragraphs
+
+
   
-  /*
-    14
-  
-    - Implemente uma função que retorna uma string com a quantidade de pessoas que  
+  /*14 - Implemente uma função que retorna uma string com a quantidade de pessoas que  
       curtiram um post, conforme descrito a seguir;
     - A função deve receber por parâmetro um array com os nomes das pessoas que  
       curtiram o post/vídeo/foto;  
@@ -194,3 +188,24 @@ console.log(typeof convertToString(true))
       pessoas já mencionadas no início da mensagem).
   */
   
+    const likesMensagem = (names =[]) => {
+      const primeiroNome = names[0]
+      const segundoNome = names[1]
+      const terceitoNome = names[2]
+      const totalNomes = names.length - 2
+
+      switch (names.length) {
+        case 0: 
+        return 'Ninguém curtiu isso'
+        case 1: 
+        return `${primeiroNome} curtiu isso`
+        case 2: 
+        return `${primeiroNome} e ${segundoNome} curtiram isso}`
+        case 3: 
+        return `${primeiroNome}, ${segundoNome} e ${terceitoNome} curtiram isso`
+        default:
+          return `${primeiroNome}, ${segundoNome} e mais ${totalNomes} pessoas curtiram a mensagem`
+      }
+    }
+
+    console.log(likesMensagem(['Erika', 'Ana', 'Tonia', 'Oreo', 'Sara']))
