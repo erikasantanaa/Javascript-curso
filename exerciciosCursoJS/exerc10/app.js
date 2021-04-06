@@ -82,16 +82,15 @@ console.log(cat.age)
     está funcionando corretamente. Mas ela pode ser melhorada;
   - Como você refatoraria esta função?*/
 
-const isAnSUV = car => {
-    if (car === 'Honda HR-V' || car === 'Jeep Renegade' || car === 'Ford EcoSport' || car === 'Hyundai iX35') {
-      return true
-    }
+const isAnSUV = carro => [
+  'Honda HR-V', 
+  'Jeep Renegade', 
+  'Ford EcoSport', 
+  'Hyundai iX35'
+].includes(carro)
   
-    return false
-  }
-  
-  // console.log(isAnSUV('Honda Civic'))
-  // console.log(isAnSUV('Ford EcoSport'))
+  console.log(isAnSUV('Honda Civic'))
+  console.log(isAnSUV('Ford EcoSport'))
   
   /*09- Crie uma função que recebe um parâmetro 'type';
     - Dentro da função, crie um objeto com as seguintes propriedades:
@@ -102,3 +101,24 @@ const isAnSUV = car => {
       propriedades, retorne a mensagem que a propriedade armazena;
     - Teste a função, exibindo no console a mensagem de cada propriedade. */
   
+    const typeDefinido = type => {
+      const obj = {
+        null: 'Seta, explicitamente, uma variável sem valor.',
+        undefined: 'Representa um valor não-setado.',
+        object: 'Arrays, Datas, Objetos literais, Funções, etc.'
+      }
+      return obj[type]
+    }
+    /*ou]:
+      return {
+        null: 'Seta, explicitamente, uma variável sem valor.',
+        undefined: 'Representa um valor não-setado.',
+        object: 'Arrays, Datas, Objetos literais, Funções, etc.'
+      }[type]
+    }
+    
+    */
+
+    console.log(typeDefinido('null'))
+    console.log(typeDefinido('undefined'))
+    console.log(typeDefinido('object'))
