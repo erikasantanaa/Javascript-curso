@@ -23,7 +23,7 @@
 console.log(`Até aqui, o objeto "cat" possui as seguintes propriedades e valores: "name", que recebeu "${cat.name}", "age", que recebeu "${cat.age}", "color", que recebeu "${cat.color}", "bestFriends", que recebeu um array com os itens "${cat.bestFriends[0]}" e "${cat.bestFriends[1]}", e "sound", que recebeu uma função que retorna "${cat.sound()}"`)
 
 /*03  - Adicione 2 anos à idade do gato e exiba a idade atualizada no console.*/
-cat.age = 1
+cat.age += 2 
 
 console.log(cat.age)
 
@@ -31,21 +31,52 @@ console.log(cat.age)
 /* 04- Crie uma função que adiciona um amigo(a) no array de amigos do gato;
   - Exiba o array de amigos no console para verificar se o novo amigo(a) foi  
     adicionado.*/
+  const adicAmigo = (amigo, objeto) => {
+    objeto.bestFriends.push(amigo)
+  }
 
+  adicAmigo('Rabicho', cat)
+  console.log(cat.bestFriends)  
 
 /*05 - Crie uma função que adiciona mais uma cor à cor do gato;
   - Utilize a sintaxe de colchetes para fazer isso;
   - Exiba a nova cor do gato no console, também utilizando a sintaxe de  
     colchetes.*/
 
+  const adicionaCor = novaCor => {
+    novaCor['color'] += ` e Amarelo`
+  }
+
+  adicionaCor(cat)
+
+  const corPropriedade = cat['color']
+  console.log(corPropriedade)
+
 /*06 - Crie uma função que retorna um boolean indicando se um valor recebido por  
     parâmetro é um objeto;
   - Utilize a função para exibir no console se "cat" é um objeto.*/
+
+  const valorObjeto = value => typeof value === 'object'
+
+  console.log(valorObjeto(cat))
 
 /* 07- Crie um objeto "dog" que possui as mesmas propriedades do objeto "cat";
   - Crie uma função que retorna a mensagem abaixo, com as informações corretas;
   - Exiba a mensagem no console.
   "A soma das idades de NOME_DO_GATO e NOME_DO_CACHORRO é RESULTADO_DA_SOMA."*/
+
+  let dog = {
+    name: 'Lupita',
+    age: 6,
+    color: 'Branco e preto',
+    bestFriends: ['Tinho', 'José'],
+    sound: () => 'Wooof'
+  }
+  const aMenssagem = (cat, dog) => `A soma das idades de ${cat.name} e ${dog.name} é ${cat.age + dog.age}`
+
+  const anosIdadeMenssagem = aMenssagem(cat, dog)
+  console.log(anosIdadeMenssagem)
+
 
 /*08 - Se você descomentar os 2 console.log abaixo, verá que a função "isAnSUV"  
     está funcionando corretamente. Mas ela pode ser melhorada;
