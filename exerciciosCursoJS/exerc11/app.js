@@ -1,14 +1,14 @@
-/*
-  01
+/*01 - Declare uma constante que recebe o seu nome;
+  - Ela deve ter um escopo global.*/
+  const meuNome = 'Erika'
+    
+  for (let i = 0; i < 5; i++) {
+    console.log(`Dentro do bloco de código: ${meuNome}`)
+  }
 
-  - Declare uma constante que recebe o seu nome;
-  - Ela deve ter um escopo global.
-*/
+  console.log(`Fora do bloco de código: ${meuNome}`)
 
-/*
-  02
-
-  - Funções também são blocos de código;
+/*02 - Funções também são blocos de código;
   - Crie uma função que ao ser invocada, exibe sua idade no console;
   - Dentro da função, declare uma let que armazena a sua idade;
   - Exiba sua idade no console, através da invocação da função;
@@ -16,13 +16,19 @@
     dentro da função;
   - Um erro com a mensagem "Uncaught ReferenceError: SUA_VARIÁVEL is not  
     defined" será exibido no console;
-  - Você sabe por que isso aconteceu?
-*/
+  - Você sabe por que isso aconteceu?*/
 
-/*
-  03
+  const idade = 28 //global
 
-  - Crie um objeto "car" com as seguintes propriedades e métodos:
+  const minhaIdade = () => {
+    let idd = 29 //interna
+    console.log(idd)
+  }
+
+  console.log(idd)
+
+
+/*03 - Crie um objeto "car" com as seguintes propriedades e métodos:
     - name, que recebe o nome do carro;
     - brand, que recebe a marca do carro;
     - colors, que recebe 3 cores para o carro;
@@ -34,30 +40,20 @@
     - stop, que é um método que faz o carro parar e retorna a mensagem  
       "O NOME_DO_CARRO está parado";
     - getColorsMessage, que é um método que retorna a mensagem  
-      "O NOME_DO_CARRO está disponível nas cores COR_01, COR_02 e COR_03".
-*/
+    //   "O NOME_DO_CARRO está disponível nas cores COR_01, COR_02 e COR_03".*/
 
-/*
-  04
+    // let car = {
+    //   name: 'Gol',
+    //   brand: 'Volkswagen',
+    //   colors: ['preto', 'dourado', 'vermelho'],
+    //   isRunning: 
+    // }
 
-  - Faça o carro andar e exiba no console se ele realmente está em movimento.
-*/
+/*04 - Faça o carro andar e exiba no console se ele realmente está em movimento.*/
 
-/*
-  05
+/* 05 - Faça o carro parar e exiba no console se ele realmente está parado.*/
 
-  - Faça o carro parar e exiba no console se ele realmente está parado.
-*/
+/*06 - Exiba, no console, a mensagem com as cores do carro.*/
 
-/*
-  06
-
-  - Exiba, no console, a mensagem com as cores do carro.
-*/
-
-/*
-  07
-
-  - Exiba, no console, a mensagem "O carro é um MARCA_DO_CARRO NOME_DO_CARRO";
-  - Utilize a notação de colchetes para acessar as propriedades do carro.
-*/
+/*07 - Exiba, no console, a mensagem "O carro é um MARCA_DO_CARRO NOME_DO_CARRO";
+  - Utilize a notação de colchetes para acessar as propriedades do carro.*/
