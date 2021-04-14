@@ -18,42 +18,66 @@
     defined" será exibido no console;
   - Você sabe por que isso aconteceu?*/
 
-  const idade = 28 //global
-
   const minhaIdade = () => {
     let idd = 29 //interna
     console.log(idd)
   }
+  minhaIdade()
 
-  console.log(idd)
+  // console.log(idd)
 
 
 /*03 - Crie um objeto "car" com as seguintes propriedades e métodos:
-    - name, que recebe o nome do carro;
-    - brand, que recebe a marca do carro;
-    - colors, que recebe 3 cores para o carro;
-    - isRunning, que recebe um boolean indicando se o carro está em movimento.  
+    - nome, que recebe o nome do carro;
+    - marca, que recebe a marca do carro;
+    - cor, que recebe 3 cor para o carro;
+    - estaCorrendo, que recebe um boolean indicando se o carro está em movimento.  
       Inicialmente, deve receber um boolean indicando que o carro não está em  
       movimento;
-    - run, que é um método que faz o carro andar e retorna a mensagem  
+    - corre, que é um método que faz o carro andar e retorna a mensagem  
       "O NOME_DO_CARRO está em movimento";
-    - stop, que é um método que faz o carro parar e retorna a mensagem  
+    - pare, que é um método que faz o carro parar e retorna a mensagem  
       "O NOME_DO_CARRO está parado";
-    - getColorsMessage, que é um método que retorna a mensagem  
-    //   "O NOME_DO_CARRO está disponível nas cores COR_01, COR_02 e COR_03".*/
+    - getcorMessage, que é um método que retorna a mensagem  
+    //   "O NOME_DO_CARRO está disponível nas cor COR_01, COR_02 e COR_03".*/
 
-    // let car = {
-    //   name: 'Gol',
-    //   brand: 'Volkswagen',
-    //   colors: ['preto', 'dourado', 'vermelho'],
-    //   isRunning: 
-    // }
+    let car = {
+      nome: 'Gol',
+      marca: 'Volkswagen',
+      cor: ['preto', 'dourado', 'vermelho'],
+      estaCorrendo: false,
+      corre () {
+        this.estaCorrendo  = true
+        return `O ${this.nome} está em movimento` 
+      },
+      pare () {
+        this.estaCorrendo = false
+        return `O ${this.nome} está parado`
+      },
+      obterMensagemCor () {
+        const ultimoItem = this.cor[this.cor.length - 1]
+        const cor = this.cor.join(', ').replace(ultimoItem, `e ${ultimoItem}`)
+
+        return `O ${this.nome} está disponível nas cor ${cor}`
+      }        
+    }
+
 
 /*04 - Faça o carro andar e exiba no console se ele realmente está em movimento.*/
+  console.log(car.corre())
+  console.log(car.estaCorrendo === true)
 
 /* 05 - Faça o carro parar e exiba no console se ele realmente está parado.*/
+console.log(car.pare())
+console.log(car.estaCorrendo === false)
 
-/*06 - Exiba, no console, a mensagem com as cores do carro.*/
+/*06 - Exiba, no console, a mensagem com as cor do carro.*/
+console.log(car.obterMensagemCor())
+
 
 /*07 - Exiba, no console, a mensagem "O carro é um MARCA_DO_CARRO NOME_DO_CARRO";
   - Utilize a notação de colchetes para acessar as propriedades do carro.*/
+
+  console.log(`O carro é um ${car['marca']} ${car['nome']}`)
+
+
