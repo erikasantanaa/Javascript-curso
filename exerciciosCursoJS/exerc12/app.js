@@ -63,42 +63,66 @@ const best2019Movies = [
         gitHub: 'https://github.com/Roger-Melo'
       },
       country: 'Brasil'
+    },
+    getRecentVideos () {
+      console.log(`
+      Vídeos recentes de ${this.name}`)
+      
+      this.videos.recentVideos.forEach( video => {
+        console.log(video.title)
+      })
     }
   }
 
-  let osVideos = `Vídeos recentes de ${youtubeUser.name}:`
+    youtubeUser.getRecentVideos()
 
-  youtubeUser.forEach(info => {
-    osVideos += `${recentVideos.length} `
-  })
-
-
-  console.log(osVideos)
-
+    console.log('------------------------------------------------------------------')
   
   /* 03 - Exiba o valor do PI no console.*/
-  
+
+  const multiplicaPi = radius => {
+    return 2 * Math.PI * radius
+  }
+
+  console.log(Math.PI)
+  console.log(multiplicaPi(10))
+
+  console.log('------------------------------------------------------------------') 
   
   
   /* 04- Arredonde o número que a constante abaixo armazena para 9 e exiba-o no  
       console. */
   
   const firstNumber = 8.3
+
+  console.log(Math.ceil(firstNumber)) 
   
   /* 05 - Arredonde o número que a constante abaixo armazena para 4, utilizando a  
       forma padrão, e exiba-o no console. */
   
   const secondNumber = 3.5
+
+  console.log(Math.round(secondNumber))
   
-  /* 06- Arredonde o número que a constante abaixo armazena para 8 e exiba-o no  
+  /* 06- Arredonde o número que a constante abaixo armazena para 8 e exiba-o no
       console. */
   
   const thirdNumber = 8.9
+
+  console.log(Math.floor(thirdNumber))
   
   /* 07- Exiba no console o número abaixo com a parte decimal removida.*/
   
   const fourthNumber = 5.5
+
+  console.log(Math.trunc(fourthNumber))
   
+  console.log('------------------------------------------------------------------') 
   /* 08    - A cada vez que o index.html for carregado, exiba no console um número  
       aleatório de 0 à 10, incluindo 0 e 10. */
   
+      const randomNumber = Math.random()
+
+      console.log(randomNumber)
+      console.log(Math.round(randomNumber)) //0 ou 1 e exibido
+      console.log(Math.round(randomNumber * 10)) //0 a 10 e exibido
