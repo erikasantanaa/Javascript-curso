@@ -20,7 +20,7 @@ const best2019Movies = [
     { title: 'História de um Casamento', directedBy: 'Noah Baumbach' },
     { title: 'Varda por Agnès', directedBy: 'Agnès Varda' },
     { title: 'A Vida Invisível', directedBy: 'Karim Aïnouz' }
-  ]
+  ] 
 
   let message = `Segundo o site Omelete, os melhores filmes de 2019 são:`
 
@@ -123,6 +123,6 @@ const best2019Movies = [
   
       const randomNumber = Math.random()
 
-      console.log(randomNumber)
-      console.log(Math.round(randomNumber)) //0 ou 1 e exibido
-      console.log(Math.round(randomNumber * 10)) //0 a 10 e exibido
+      console.log(randomNumber) //numeros aleatorios
+      console.log(Math.round(randomNumber)) //Numero aleatorio de 0 ou 1 e exibido
+      console.log(Math.round(randomNumber * 10)) //Numero aleatorio de 0 a 10 e exibido
