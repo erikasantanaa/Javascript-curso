@@ -37,8 +37,6 @@ console.log(dog)
  }
 
  console.log(cat) //o var foge do escopo
-
-
- //Escopo Léxico: 
+//Escopo Léxico:
 
  
