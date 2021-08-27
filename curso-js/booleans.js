@@ -14,7 +14,7 @@ console.log(namesIncludes)
 console.log('------------------')
 //Operadores de comparação
 const age = 31
-const name = 'roger'
+const name = 'erika'
 
 console.log(age == 31)
 console.log(age == 35)
@@ -26,8 +26,8 @@ console.log(age >= 31)
 
 console.log('------------------')
 
-console.log(name == 'roger')
-console.log(name == 'Roger')
-console.log(name != 'belinha')
-console.log(name > 'Roger')
-console.log(name < 'Belinha')
+console.log(name == 'erika')
+console.log(name == 'Erika')
+console.log(name != 'tonia')
+console.log(name > 'Erika')
+console.log(name < 'Tonia')
