@@ -39,4 +39,16 @@ console.log(dog)
  console.log(cat) //o var foge do escopo
 //Escopo Léxico:
 
- 
+const osVingadores = () => {
+    const homemDeFerro = 'Tony'
+
+    const thanos = () => {
+        //const homemDeFerro = 'Capitão America'
+
+        const thanosEAmora = () => {
+            console.log(homemDeFerro.toUpperCase())
+        }
+        
+        thanos()
+    }
+}
