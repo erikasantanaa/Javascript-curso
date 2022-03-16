@@ -139,4 +139,5 @@ const getCatInfo = () => {
   */
 
   const titulosSecund = document.querySelectorAll('secondary-title')
+  console.log(titulosSecund)
   
