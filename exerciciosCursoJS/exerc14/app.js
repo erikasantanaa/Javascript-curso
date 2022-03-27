@@ -1,20 +1,31 @@
-/*
-  01
-
-  - Faça com que o texto do h1 do index.html seja exibido com todas as letras  
-    maiúsculas.
+/*  01
+  - Faça com que o texto do h1 do index.html seja exibido
+  com todas as letras maiúsculas.
 */
 
+const titulo = document.querySelector('h1')
+
+console.log(titulo)
+
+titulo.textContent = titulo.textContent.toUpperCase()
 
 
-/*
-  02
-
-  - Adicione, na ul vazia do index.html, os números do array "numbers" abaixo;
-  - Cada número deve estar dentro de uma <li> com a classe "number".
+/*02
+  - Adicione, na ul vazia do index.html, os números do 
+  array "numbers" abaixo;
+  - Cada número deve estar dentro de uma <li> com a 
+  classe "number".
 */
 
 const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ]
+const ul = document.querySelector('.numbers')
+
+    //refatorado
+const insertNumberIntoUl = number => {
+  ul.innerHTML += `<li class="number">${number}</li>`
+}
+
+numbers.forEach(insertNumberIntoUl)
 
 /*
   03
@@ -23,6 +34,8 @@ const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ]
     - Se o número é par, ele deve ser exibido na cor "lightblue";
     - Se o número é ímpar, exiba-o na cor "pink".
 */
+
+const lis = document.querySelectorAll('.number')
 
 
 
