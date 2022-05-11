@@ -1,10 +1,15 @@
-/*
-  01
-
-  - Obtenha a ul do index.html e adicione em todos os elementos filhos dela,  
-    uma classe 'video';
+/*01
+  - Obtenha a ul do index.html e
+  adicione em todos os elementos filhos dela, uma classe 'video';
   - Exiba no console os elementos filhos da ul com a classe já inserida.
 */
+
+const ul = document.querySelector('.videos')
+
+console.log(ul)
+
+
+  
 
 
 
