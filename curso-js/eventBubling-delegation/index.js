@@ -10,6 +10,15 @@ button.addEventListener('click', () => {
     ul.prepend(li)
 } )
 
+/*ao verificar o nodeName no console do event-target, 
+se tem a LI como resposta, então, se event.target for
+igual a 'LI' , remove */
 ul.addEventListener('click', event => {
-    console.log('clicou aqui ul')
+    const clickedElement = event.target 
+
+    if (clickedElement.nodeName === 'LI') {
+        clickedElement.revome()
+    }
+
+    // console.log(event)
 })
