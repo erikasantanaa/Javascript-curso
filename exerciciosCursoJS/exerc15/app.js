@@ -82,8 +82,7 @@ const button = document.querySelector('button')
 
 button.addEventListener('click', handleClickButton)
 
-  /*07
-    - Se um clique no h1 acontecer, faça com que todos os elementos dentro do body 
+  /*07- Se um clique no h1 acontecer, faça com que todos os elementos dentro do body 
       sejam removidos.
   */
   
