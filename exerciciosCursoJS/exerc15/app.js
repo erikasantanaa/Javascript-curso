@@ -5,51 +5,56 @@
 */
 
 const ul = document.querySelector('.videos')
+const lis = Array.from(ul.children)
 
-console.log(ul)
+const classLi = li => {li.classList.add('videos')}
 
+lis.forEach(classLi)
 
-  
+// console.log(lis)
 
-
-
-/*
-  02
-
+/*02
   - Usando a propriedade adequada, descubra quem é o elemento pai do h2
     e exiba-o no console;
 */
+const title = document.querySelector('h2')
+console.log(title)
+console.log(title.parentElement)
 
 
-
-/*
-  03
-
+/*03
   - Descubra quem é o próximo elemento irmão do h1 e exiba-o no console;
 */
+const h1 = document.querySelector('h1')
+console.log('irmão do h1- proximo',h1.nextElementSibling)
 
 
-
-/*
-  04
-
+/*04
   - Descubra quem é o irmão anterior da ul e exiba-o no console;
 */
+const ulAnt = document.querySelector('ul')
+console.log('irmão do ul- anterior', ulAnt.previousElementSibling)
 
-
-
-/*
-  05
-
+/*05
   - Quando um clique acontecer em alguma das lis, faça com que a li clicada seja  
     exibida no console.
+    3 passos: 
+    1- Fazer um query no Dom para obter a referencia do elemento;
+    2- Adicionar um addEventListener nesse elemeto;
+    3- Implementar uma função de callback que vai ser executada quando esse evento acontecer
 */
+const showClickedLi = event => {
+  console.log(event.target)
+}
+
+const addClickEvent = li => {
+  li.addEventListener('click', showClickedLi)
+}
+
+lis.forEach(addClickEvent)
 
 
-
-/*
-  06
-
+/*06
   - Quando o botão for clicado, adicione o nome dos vídeos abaixo dentro da ul;
   - Cada nome deve estar dentro de uma li.
 */
@@ -65,10 +70,25 @@ const videos = [{
     length: '00:02:55'
   }]
   
-  /*
-    07
-  
+const insertVideoLi = ({name, length}) => {
+  ul.innerHTML += `<li>${name} | ${length}</li>`
+}
+
+const handleClickButton = () => {
+  videos.forEach(insertVideoLi)
+}
+
+const button = document.querySelector('button')
+
+button.addEventListener('click', handleClickButton)
+
+  /*07
     - Se um clique no h1 acontecer, faça com que todos os elementos dentro do body 
       sejam removidos.
   */
   
+const body = document.body
+
+h1.addEventListener('click', () => {
+  body.innerHTML = ''
+})
