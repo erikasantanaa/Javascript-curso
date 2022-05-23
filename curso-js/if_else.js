@@ -1,4 +1,3 @@
-//controle de fluxo
 const password = '12345678'
 
 if (password.length >= 12){
@@ -8,8 +7,6 @@ if (password.length >= 12){
 } else {
     console.log('a senha deve conter 8 pu mais caracteres')
 }
-
-//operadores lógicos - "OU" || e "E" &&
 
 const passw = '12345678'
 

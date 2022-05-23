@@ -1,5 +1,3 @@
-
-
 const article = document.querySelector('article')
 
 Array.from(article.children).forEach(element => {

@@ -1,6 +1,3 @@
-//switch stratement (controle de fluxo)
-//nota que o aluno tirou na prova:
-
 const grade = 'B'
 
 switch (grade){
@@ -23,9 +20,6 @@ switch (grade){
         console.log('nota invalida')       
 }
 
-
-
-//usando if stratements (pessima ideia)
 if (grade === 'A'){
 
 }else if (grade === 'B'){

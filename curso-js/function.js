@@ -1,11 +1,9 @@
 //function declaration - HOISTING 
-
 sayHi()
 
 function sayHi() {
     console.log('Olá')
 }
-
 
 //function expression
 const showFood = function() {

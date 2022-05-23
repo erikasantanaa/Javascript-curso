@@ -1,3 +1,4 @@
+
 let listaDePessoasAprovadas = [
     'erika@exemplo.com',
     'alice@exemplo.com',

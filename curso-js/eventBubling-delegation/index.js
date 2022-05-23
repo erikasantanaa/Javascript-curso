@@ -1,4 +1,3 @@
-//adicionando e removendo itens lista
 const ul = document.querySelector('ul')
 const button = document.querySelector('button')
 
