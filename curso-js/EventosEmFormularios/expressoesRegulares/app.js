@@ -7,13 +7,3 @@ form.addEventListener('submit', event => {
 
     console.log(event.target.username.value)
 })
-
-const username = 'erika123'
-const pattern = /^[a-z]{6,}$/
-const isAMatch = pattern.test(username)
-
-if (isAMatch) {
-    console.log('O teste da regex passou =)')
-} else {
-    console.log('O teste da regex não passou =(')
-}
