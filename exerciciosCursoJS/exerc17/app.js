@@ -35,7 +35,7 @@
     input.focus()
   }
   const logMessage = message => {
-    console.log(message)
+    alert(message)
     clearInput()
   }
 
@@ -50,7 +50,7 @@
       logMessage('O valor inserido no input é válido =)')
       return
     }
-
+    
     logMessage('Valor inválido =(')
   } 
 
@@ -63,11 +63,11 @@ index.html;
 - Exiba no console o boolean no qual este
 teste resulta.*/
 
-const p = document.querySelector('p')
-const regex =/documentation/
-const result = regex.test(p.textContent)
+// const p = document.querySelector('p')
+// const regex =/documentation/
+// const result = regex.test(p.textContent)
 
-console.log(result)
+// console.log(result)
 
 /*04 - Escreva uma regex que dê match com 
 a palavra "B99" da string abaixo;
@@ -76,20 +76,20 @@ os caracteres B99;
 - Teste se o match aconteceu e exiba o
 resultado no console.*/
 
-const B99message = 'E o Terry Crews faz tudo, inclusive tocar a abertura de B99 na flauta'
-const regexB99 = /[A-Z0-9]{3}/
-const resulB99 = regexB99.test(B99message)
+// const B99message = 'E o Terry Crews faz tudo, inclusive tocar a abertura de B99 na flauta'
+// const regexB99 = /[A-Z0-9]{3}/
+// const resulB99 = regexB99.test(B99message)
 
-console.log(resulB99)
+// console.log(resulB99)
 
 /*05 - Modifique (manualmente) o valor que 
 a const word armazena para que o resultado
 do teste entre a regex e a string exibido
 no console seja true.*/
 
-const word = 'NASA'
-const NASARegex = /^[A-Z]{4}$/   //buscando uma palavra
-const NASAResult = NASARegex.test(word)
+// const word = 'NASA'
+// const NASARegex = /^[A-Z]{4}$/   //buscando uma palavra
+// const NASAResult = NASARegex.test(word)
 
-console.log(NASAResult)
+// console.log(NASAResult)
 
