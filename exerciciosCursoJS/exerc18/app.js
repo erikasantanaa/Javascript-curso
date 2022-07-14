@@ -14,29 +14,37 @@
   - Use as classes disponíveis no arquivo style.css para colorir o parágrafo;
   - Não insira o parágrafo manualmente no index.html.
   
-  Dica: pesquise pelo método "insertAdjacentElement", no MDN;*/
+  Dica: pesquise pelo método "insertAdjacentElement", no MDN;
+  o not ( ! ) vai inverter o booblean, no qual a invocação resultou.*/
 
-const inputUsername = document.querySelector('#username')
-
-inputUsername.addEventListener('keyup', event => {
-  const inputValue = event.target.value
-  const usernameRegex = /^[a-zA-Z]{6,}$/
-
+  const inputUsername = document.querySelector('#username')
+  
   const p = document.createElement('p')
+  
+  inputUsername.addEventListener('keyup', event => {
+    const inputValue = event.target.value
+    const usernameRegex = /^[a-zA-Z]{6,}$/
+  
+    if (!usernameRegex.test(inputValue)) {
+      p.textContent = 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas'
+      p.setAttribute('class', 'username-help-feedback')
+      event.target.insertAdjacentElement('afterend', p)
+      return
+    }
+    
+    p.textContent = 'username valido =)'
+    p.setAttribute('class', 'username-success-feedback')
+    event.target.insertAdjacentElement('afterend', p)
+    
+  })
+  
 
 
-  /*o not ( ! ) vai inverter o booblean, no qual a invocação resultou.*/
-  if (!usernameRegex.test(inputValue)) {
-    p.textContent = 'O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas'
-    return
-  }
-  p.textContent = 'username valido =)'
-})
 
 
 
-
-/*  02
+  
+  /*  02
   - Valide o envio do form;
   - Se o username inserido no input é válido, no envio do form, exiba um  
     parágrafo verde abaixo do botão com a mensagem "Dados enviados =)";
@@ -44,6 +52,8 @@ inputUsername.addEventListener('keyup', event => {
     vermelho e exibir "Por favor, insira um username válido".
   - Use as classes disponíveis no arquivo style.css para colorir o parágrafo;
   - Não insira o parágrafo manualmente no index.html.*/
+
+  
 
 /*  03
   - Há algumas aulas, falamos sobre o método some;
