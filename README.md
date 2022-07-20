@@ -17,6 +17,7 @@
 
 ### Projetos
 
-- Formulário
 - Popup
-- Tela de Login
+- Quiz
+- To-do List
+- Weather Application
